@@ -7,7 +7,7 @@ const cors = require('cors');
 const app = express();
 
 const openai = new OpenAI({
-	apiKey: ''
+	apiKey: process.env.CHATGPT_TOKEN
 });
 
 app.use(bodyParser.json());
