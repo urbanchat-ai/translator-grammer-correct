@@ -10,6 +10,13 @@ const openai = new OpenAI({
 });
 
 app.use(bodyParser.json());
+app.use(
+    "*",
+    cors({
+      origin: true,
+      credentials: true,
+    })
+);
 
 async function chatCompletion(query){
         
